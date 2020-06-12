@@ -8,8 +8,9 @@
     <color name="colorGray">#708090</color>
 
     <color name="colorWhite">#FFFFFF</color>
-    <color name="camel">#FFA500</color>
-    <color name="ice">#AFFBFF</color>
+    <color name="camel">#fea02f</color>
+    <color name="ice">#72b8c9</color>
+    <color name="dark_ice">#00213a</color>
     <color name="blue">#67AEB2</color>
     <color name="orange">#FE092B</color>
 
