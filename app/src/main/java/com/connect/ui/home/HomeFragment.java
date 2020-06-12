@@ -1,5 +1,6 @@
 package com.connect.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.connect.R;
+import com.connect.ui.booking.BookingActivity;
 
 import java.util.ArrayList;
 
@@ -24,6 +26,7 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     RecyclerView recyclerView;
+    private Button bookingButton;
 
     @Nullable
     @Override
@@ -57,7 +60,21 @@ public class HomeFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
 
+        // BOOKING.
+        bookingButton = (Button) root.findViewById(R.id.book_btn);
+        bookingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBookingActivity();
+            }
+        });
+
         return root;
+    }
+
+    public void openBookingActivity() {
+        Intent intent = new Intent(getActivity(), BookingActivity.class);
+        startActivity(intent);
     }
 
     // public void onCreate() {}
