@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.connect.R;
 import com.connect.ui.booking.BookingActivity;
+import com.connect.ui.prescription.PrescriptionActivity;
 
 import java.util.ArrayList;
 
@@ -27,6 +28,7 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
     RecyclerView recyclerView;
     private LinearLayout bookingButton;
+    private LinearLayout prescriptionButton;
 
     @Nullable
     @Override
@@ -72,7 +74,21 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        // PRESCRIPTION.
+        prescriptionButton = (LinearLayout) root.findViewById(R.id.presc_btn);
+        prescriptionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openPrescriptionActivity();
+            }
+        });
+
         return root;
+    }
+
+    public void openPrescriptionActivity() {
+        Intent intent = new Intent(getActivity(), PrescriptionActivity.class);
+        startActivity(intent);
     }
 
     public void openBookingActivity() {
