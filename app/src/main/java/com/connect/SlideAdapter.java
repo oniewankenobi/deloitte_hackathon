@@ -7,46 +7,62 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 
-public class SlideAdapter extends PagerAdapter {
+import com.connect.ui.calendar.CalendarFragment;
+import com.connect.ui.home.HomeFragment;
+import com.connect.ui.profile.ProfileFragment;
+
+public class SlideAdapter extends FragmentPagerAdapter {
 
     Context context;
     LayoutInflater layoutInflater;
+    private Fragment[] fragments;
 
-    public SlideAdapter(Context context) {
-        this.context = context;
+    public SlideAdapter(FragmentManager fm) {
+        super(fm);
+        fragments = new Fragment[] {
+                new ProfileFragment(),
+                new HomeFragment(),
+                new CalendarFragment()
+        };
     }
 
-    private int[] fragments = {
-            R.layout.fragment_dashboard,
-            R.layout.fragment_home,
-            R.layout.fragment_notifications
-    };
+
 
     @Override
     public int getCount() {
         return 3;
     }
 
-    @Override
-    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view == (RelativeLayout) object;
-    }
+//    @Override
+//    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
+//        return view == (RelativeLayout) object;
+//    }
 
     @NonNull
     @Override
-    public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(fragments[position], container, false);
-
-        container.addView(view);
-        return view;
+    public Fragment getItem(int position) {
+        return fragments[position];
     }
 
-    @Override
-    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView((RelativeLayout) object);
-    }
+//    @NonNull
+//    @Override
+//    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+//        layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+//        View view = layoutInflater.inflate(fragments[position], container, false);
+//
+//        container.addView(view);
+//        return view;
+//    }
+
+//    @Override
+//    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+//        container.removeView((Fragment) object);
+//    }
 }
 
