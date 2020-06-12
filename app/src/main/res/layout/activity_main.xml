@@ -20,10 +20,20 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/slideViewPager"
+        android:layout_marginTop="65dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorWhite"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="57dp"
         />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_margin="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/direct" />
 
 </RelativeLayout>

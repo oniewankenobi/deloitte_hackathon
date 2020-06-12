@@ -32,7 +32,8 @@ class CustomAdapter(
 
     // bind data to elements
     override fun onBindViewHolder(holder: CustomAdapter.ViewHolder, position: Int) {
-        holder.tvTitle.text = dates[position].title
+        holder.tvDate.text = dates[position].date
+        holder.tvReason.text = dates[position].reason
         items.add(holder.card)
     }
 
@@ -40,7 +41,8 @@ class CustomAdapter(
     internal constructor(
             itemView: View
     ) : RecyclerView.ViewHolder(itemView) {
-        val tvTitle: TextView = itemView.tvTitle
+        val tvDate: TextView = itemView.date
+        val tvReason: TextView = itemView.reason
         val card: CardView = itemView.card
     }
 }

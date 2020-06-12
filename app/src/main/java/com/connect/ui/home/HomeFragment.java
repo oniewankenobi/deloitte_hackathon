@@ -43,9 +43,12 @@ public class HomeFragment extends Fragment {
 
         // vertical date scroll in home
         ArrayList<DateObject> data = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            data.add(new DateObject("DATE"));
-        }
+        data.add(new DateObject("TODAY 10AM", "Scheduled checkup with Dr. Selina"));
+        data.add(new DateObject("WED 8AM", "Scheduled checkup with Dr. Chris"));
+        data.add(new DateObject("MON 10AM", "Scheduled checkup with Dr. Selina"));
+        data.add(new DateObject("WED 8AM", "Scheduled checkup with Dr. Chris"));
+        data.add(new DateObject("MON 10AM", "Scheduled checkup with Dr. Selina"));
+
 
         FragmentActivity fragmentActivity = getActivity();
         LinearLayoutManager layoutManager = new LinearLayoutManager(fragmentActivity, LinearLayoutManager.HORIZONTAL, false);

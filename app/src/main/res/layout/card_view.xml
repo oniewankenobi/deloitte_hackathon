@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/card"
-    android:layout_width="125dp"
+    android:layout_width="300dp"
     android:layout_height="100dp"
     android:layout_margin="10dp"
     app:cardBackgroundColor="@android:color/white"
@@ -12,17 +12,30 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/ice">
+
         <TextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:text="Title"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/reason"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="20dp"
             android:text="Title"
-            android:textColor="@color/colorPrimary"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            android:textStyle="normal"/>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
