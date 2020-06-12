@@ -22,29 +22,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-//        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-//                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
-//                .build();
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-//        NavigationUI.setupWithNavController(navView, navController);
 
         slideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         slideAdapter = new SlideAdapter(this);
         slideViewPager.setAdapter(slideAdapter);
+        // Sets first page we see to be the home page.
+        slideViewPager.setCurrentItem(1);
 
         // Bottom Navigation View
         bottomNavView = (BottomNavigationView) findViewById(R.id.bottomNavView);
-//        appBarConfiguration = new AppBarConfiguration.Builder(
-//                R.id.navigation_profile, R.id.navigation_home, R.id.navigation_calendar
-//        ).build();
-//        NavController navController = Navigation.findNavController(this, R.id.slideViewPager);
-////        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-//        NavigationUI.setupWithNavController(bottomNavView, navController);
-
+        // Highlights the home page button in nav bar.
+        bottomNavView.getMenu().getItem(1).setChecked(true);
         bottomNavView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
