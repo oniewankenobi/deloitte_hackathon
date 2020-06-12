@@ -21,7 +21,7 @@ public class SlideAdapter extends PagerAdapter {
     private int[] fragments = {
             R.layout.fragment_dashboard,
             R.layout.fragment_home,
-            R.layout.fragment_notifications
+            R.layout.fragment_calendar
     };
 
     @Override
