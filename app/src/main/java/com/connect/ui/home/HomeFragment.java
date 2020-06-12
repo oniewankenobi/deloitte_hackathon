@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,7 +26,7 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     RecyclerView recyclerView;
-    private Button bookingButton;
+    private LinearLayout bookingButton;
 
     @Nullable
     @Override
@@ -64,7 +64,7 @@ public class HomeFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         // BOOKING.
-        bookingButton = (Button) root.findViewById(R.id.book_btn);
+        bookingButton = (LinearLayout) root.findViewById(R.id.book_btn);
         bookingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
