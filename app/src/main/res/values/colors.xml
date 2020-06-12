@@ -5,5 +5,8 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="colorBlack">#000000</color>
     <color name="colorGray">#708090</color>
+
     <color name="colorWhite">#FFFFFF</color>
+    <color name="camel">#ECD19E</color>
+
 </resources>

@@ -5,4 +5,9 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_profile">Profile</string>
     <string name="title_calendar">Calendar</string>
+    <string name="services">Services</string>
+    <string name="book">Book </string>
+    <string name="prescriptions">Prescription</string>
+    <string name="consult">Consult</string>
+    <string name="house">House Call</string>
 </resources>
