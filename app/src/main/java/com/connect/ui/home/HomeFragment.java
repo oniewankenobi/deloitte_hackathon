@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.Observer;
@@ -19,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.connect.R;
 import com.connect.ui.booking.BookingActivity;
+import com.connect.ui.chat.MessageActivity;
 
 import java.util.ArrayList;
 
@@ -27,6 +29,7 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
     RecyclerView recyclerView;
     private LinearLayout bookingButton;
+    private CardView messageButton;
 
     @Nullable
     @Override
@@ -72,11 +75,25 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        // MESSAGE.
+//        messageButton = (CardView) recyclerView.findViewHolderForAdapterPosition(0).itemView;
+//        messageButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openMessageActivity();
+//            }
+//        });
+
         return root;
     }
 
     public void openBookingActivity() {
         Intent intent = new Intent(getActivity(), BookingActivity.class);
+        startActivity(intent);
+    }
+
+    public void openMessageActivity() {
+        Intent intent = new Intent(getActivity(), MessageActivity.class);
         startActivity(intent);
     }
 
