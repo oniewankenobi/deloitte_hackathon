@@ -1,16 +1,19 @@
 package com.connect;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.connect.ui.SlideAdapter;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager slideViewPager;
     private SlideAdapter slideAdapter;
+    private BottomNavigationView bottomNavView;
 
 
     @Override
@@ -30,6 +33,30 @@ public class MainActivity extends AppCompatActivity {
         slideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         slideAdapter = new SlideAdapter(this);
         slideViewPager.setAdapter(slideAdapter);
+
+        // Bottom Navigation View
+        bottomNavView = (BottomNavigationView) findViewById(R.id.bottomNavView);
+        bottomNavView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            // add all the possible navigations.
+                            case R.id.navigation_profile:
+                                slideViewPager.setCurrentItem(0);
+                                break;
+                            case R.id.navigation_home:
+                                slideViewPager.setCurrentItem(1);
+                                break;
+                            case R.id.navigation_calendar:
+                                slideViewPager.setCurrentItem(2);
+                                break;
+                        }
+                        return false;
+                    }
+                }
+        );
+
 
     }
 
