@@ -15,13 +15,13 @@
         <activity
             android:name=".ui.booking.BookingActivity"
             android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity android:name=".ui.prescription.PrescriptionActivity" />
         <activity
             android:name=".MainActivity"
             android:label="DRect"
             android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

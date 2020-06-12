@@ -23,7 +23,6 @@ public class BookingActivity extends AppCompatActivity {
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("BUTTON PRESS");
                 doneButton.setBackground(getDrawable(R.drawable.green_circular_button_shape));
                 showConfirmationDialog();
             }

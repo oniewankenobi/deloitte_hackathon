@@ -11,5 +11,7 @@
     <string name="consult">TELECONSULT</string>
     <string name="house">HOUSE CALL</string>
     <string name="booking_confirmation">Your booking has been confirmed!</string>
+    <string name="pres_confirmation">Your prescription has been sent!</string>
     <string name="close_dialog">close</string>
+    <string name="pres_terms_and_conditions">By ticking this box, I confirm this information to be relevant and up-to-date. I confirm that these medications have been formerly prescribed to me by my acting physician, and require a topup. I acknowledge that my physician will receive a copy of this request, in order to approve.</string>
 </resources>

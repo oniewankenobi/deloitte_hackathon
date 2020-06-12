@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.connect.R;
 import com.connect.ui.booking.BookingActivity;
 import com.connect.ui.chat.MessageActivity;
+import com.connect.ui.prescription.PrescriptionActivity;
 
 import java.util.ArrayList;
 
@@ -30,6 +31,7 @@ public class HomeFragment extends Fragment {
     RecyclerView recyclerView;
     private LinearLayout bookingButton;
     private CardView messageButton;
+    private LinearLayout prescriptionButton;
 
     @Nullable
     @Override
@@ -75,16 +77,21 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        // MESSAGE.
-//        messageButton = (CardView) recyclerView.findViewHolderForAdapterPosition(0).itemView;
-//        messageButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                openMessageActivity();
-//            }
-//        });
+        // PRESCRIPTION.
+        prescriptionButton = (LinearLayout) root.findViewById(R.id.presc_btn);
+        prescriptionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openPrescriptionActivity();
+            }
+        });
 
         return root;
+    }
+
+    public void openPrescriptionActivity() {
+        Intent intent = new Intent(getActivity(), PrescriptionActivity.class);
+        startActivity(intent);
     }
 
     public void openBookingActivity() {
