@@ -10,4 +10,6 @@
     <string name="prescriptions">Prescription</string>
     <string name="consult">Consult</string>
     <string name="house">House Call</string>
+    <string name="booking_confirmation">Your booking has been confirmed!</string>
+    <string name="close_dialog">close</string>
 </resources>
