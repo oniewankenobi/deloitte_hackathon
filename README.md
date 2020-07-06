@@ -1,8 +1,8 @@
 # deloitte_hackathon
 cse deloitte hackathon 
 
-# mobile app 
-# android studio [java, kotlin]
+mobile app 
+android studio [java, kotlin]
 
 streamlining communication between patient and doctor
   functions:
