@@ -1,9 +1,10 @@
 # deloitte_hackathon
-cse deloitte hackathon 
 
-mobile app 
-android studio [java, kotlin]
+technologies
+ - mobile app 
+ - android studio [java, kotlin]
 
+_reinventing patient autonomy, flexibility and efficiency_ 
 streamlining communication between patient and doctor
   functions:
     - book appointments
