@@ -1,15 +1,17 @@
 # deloitte_hackathon
 
-technologies
- - mobile app 
- - android studio [java, kotlin]
+Click [here](https://drive.google.com/file/d/1eLUtuR7RW8RCGOB3V9uLu8Wxxtf12O1t/view?usp=sharing) for our rough pitch deck.
 
-_reinventing patient autonomy, flexibility and efficiency_ 
-streamlining communication between patient and doctor
+Technologies
+ - Mobile app 
+ - Android studio (Java, Kotlin)
 
-  functions:
+_Reinventing patient autonomy, flexibility and efficiency._ 
+Streamlining communication between patient and doctor.
+
+  Functions:
   
-    - book appointments
-    - regular checkups without physically going to clinic
-    - top-up prescriptions
-    - on call consultations
+    - Book appointments
+    - Regular checkups without physically going to clinic
+    - Top-up prescriptions
+    - On call consultations
